@@ -1,12 +1,25 @@
+// src/app/app.ts
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { RouterOutlet, RouterLink } from '@angular/router';
+import { CartService } from './services/cart.service';
+import { Observable } from 'rxjs';
+import { Libro } from './data';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
+  imports: [CommonModule, RouterOutlet, RouterLink],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrls: ['./app.css']
 })
 export class App {
   protected readonly title = signal('Nexus');
+
+  // si quieres mostrar el número de items en la navbar:
+  items$: Observable<Libro[]>;
+
+  constructor(private cart: CartService) {
+    this.items$ = this.cart.items$;
+  }
 }
