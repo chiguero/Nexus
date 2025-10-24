@@ -9,7 +9,11 @@
 
       <a class="btn btn-outline-primary position-relative" routerLink="/carrito">
         🛒 Carrito
-        <span class="badge bg-danger rounded-pill ms-1" *ngIf="(items$ | async)?.length as n">{{ n }}</span>
+        <span class="badge bg-danger rounded-circle position-absolute top-0 start-100 translate-middle" 
+              style="width: 20px; height: 20px; display: flex; align-items: center; justify-content: center"
+              *ngIf="(items$ | async)?.length">
+          {{ (items$ | async)?.length }}
+        </span>
       </a>
     </div>
   </div>

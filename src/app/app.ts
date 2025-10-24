@@ -15,11 +15,9 @@ import { Libro } from './data';
 })
 export class App {
   protected readonly title = signal('Nexus');
-
-  // si quieres mostrar el número de items en la navbar:
   items$: Observable<Libro[]>;
 
   constructor(private cart: CartService) {
-    this.items$ = this.cart.items$;
+    this.items$ = cart.items$;
   }
 }

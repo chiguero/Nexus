@@ -18,7 +18,13 @@ export class CartService {
   }
 
   remove(libroId: number) {
-    this._items.next(this.items.filter(i => i.id !== libroId));
+    // Encuentra el índice de la primera ocurrencia del libro a eliminar
+    const index = this.items.findIndex(item => item.id === libroId);
+    if (index > -1) {
+      // Crea una nueva lista sin el libro en ese índice específico
+      const updatedItems = [...this.items.slice(0, index), ...this.items.slice(index + 1)];
+      this._items.next(updatedItems);
+    }
   }
 
   clear() {
