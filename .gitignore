@@ -56,6 +56,10 @@ out-tsc/
 # IDEs
 .vscode/
 .idea/
+*.swp
+*.swo
 
-# Archivos del sistema
-.DS_Store
+# Variables de entorno
+.env
+.env.local
+EOF
