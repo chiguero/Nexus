@@ -8,7 +8,7 @@
       <a class="nav-link me-3" routerLink="/buscador">Buscar</a>
 
       <a class="btn btn-outline-primary position-relative" routerLink="/carrito">
-        🛒
+        🛒 Carrito
         <span class="badge bg-danger rounded-pill ms-1" *ngIf="(items$ | async)?.length as n">{{ n }}</span>
       </a>
     </div>
