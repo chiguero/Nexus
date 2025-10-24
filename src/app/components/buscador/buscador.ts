@@ -2,7 +2,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-// import { RouterLink } from '@angular/router'; // <-- eliminado, no se usa en esta plantilla
 import { LIBROS, Libro } from '../../data';
 import { CartService } from '../../services/cart.service';
 
@@ -17,7 +16,7 @@ export class Buscador {
   libros: Libro[] = LIBROS;
   filtroTitulo = '';
   filtroAutor = '';
-  filtroAnio: number | null = null; // <-- renombrado
+  filtroAnio: number | null = null;
 
   filtroCategoria = '';
   categorias: string[] = Array.from(new Set(this.libros.map(l => l.categoria)));

@@ -12,7 +12,7 @@ import { CartService } from '../../services/cart.service';
 })
 export class Masvendidos {
   libros: Libro[] = LIBROS.slice(0, 4);
-  hoveredBookId: number | null = null; // used by template for a subtle hover effect
+  hoveredBookId: number | null = null;
 
   constructor(private cart: CartService) {}
 

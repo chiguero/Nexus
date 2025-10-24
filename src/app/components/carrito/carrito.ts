@@ -16,7 +16,7 @@ import { Subscription } from 'rxjs';
 export class Carrito implements OnInit, OnDestroy {
   carrito: Libro[] = [];
   sub!: Subscription;
-  applyCoupon = false; // two-way binding example with ngModel
+  applyCoupon = false;
 
   constructor(private cart: CartService) {}
 
