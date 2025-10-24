@@ -62,4 +62,4 @@ out-tsc/
 # Variables de entorno
 .env
 .env.local
-EOF
+EOFpackage-lock.json
