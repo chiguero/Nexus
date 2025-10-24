@@ -5,7 +5,9 @@
   <div class="row">
     <div class="col-md-3 mb-4" *ngFor="let libro of libros">
       <div class="card h-100 book-card" (mouseenter)="hoveredBookId = libro.id" (mouseleave)="hoveredBookId = null" [class.shadow-lg]="hoveredBookId === libro.id">
-        <img [src]="libro.imagen" class="card-img-top" [alt]="libro.titulo">
+        <div class="card-img-top cover-wrap">
+          <img [src]="libro.imagen" class="book-cover" [alt]="libro.titulo">
+        </div>
         <div class="card-body d-flex flex-column">
           <h5 class="card-title">{{ libro.titulo }}</h5>
           <p class="card-subtitle mb-2 text-muted small">{{ libro.autor }} • {{ libro.anio }}</p>

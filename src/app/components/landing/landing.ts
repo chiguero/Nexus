@@ -11,6 +11,6 @@ import { CommonModule } from '@angular/common';
 })
 export class Landing {
   heroTitle = 'Nexus Books';
-  imagePath = 'assets/landing-img.jpg';
+  imagePath = 'assets/images/landing-img.jpg';
   showPromo = true;
 }
