@@ -10,7 +10,10 @@
       </div>
     </div>
     <div class="col-md-6 text-center">
-      <img src="https://via.placeholder.com/420x300?text=Nexus+Books" class="img-fluid rounded" alt="Nexus Books">
+          <img [src]="imagePath" class="img-fluid rounded" alt="Nexus Books">
+          <div class="mt-2" *ngIf="showPromo">
+            <small class="text-muted">Promo: envío gratis en pedidos superiores a $50</small>
+          </div>
     </div>
   </div>
 </div>

@@ -26,8 +26,12 @@
         <button class="btn btn-outline-danger me-2" (click)="clear()">Vaciar carrito</button>
         <a routerLink="/masvendidos" class="btn btn-outline-secondary">Seguir comprando</a>
       </div>
-      <div class="fs-5">
-        Total: <strong>${{ total.toFixed(2) }}</strong>
+      <div class="fs-5 text-end">
+        <div class="form-check form-check-inline me-3">
+          <input class="form-check-input" type="checkbox" id="applyCoupon" [(ngModel)]="applyCoupon">
+          <label class="form-check-label small text-muted" for="applyCoupon">Aplicar cupón 10%</label>
+        </div>
+        Total: <strong>${{ totalConDescuento.toFixed(2) }}</strong>
       </div>
     </div>
   </div>
