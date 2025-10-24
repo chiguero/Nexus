@@ -41,3 +41,20 @@ __screenshots__/
 # System files
 .DS_Store
 Thumbs.db
+
+# Dependencias de Node.js
+node_modules/
+package-lock.json
+
+# Archivos de Angular
+.angular/
+dist/
+tmp/
+out-tsc/
+
+# IDEs
+.vscode/
+.idea/
+
+# Archivos del sistema
+.DS_Store
